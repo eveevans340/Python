@@ -18,7 +18,7 @@ while True:
         balance = balance - money
         # Adding balances to money_list
         money_list.append(balance)
-        #Conditions for the loop to break
+        # Conditions for the loop to break
         if balance <= 0:
             break 
     # Message if the user enters a non integer

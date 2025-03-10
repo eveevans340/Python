@@ -19,7 +19,7 @@ while True:
             volt_list.append('Beep')
         else:
             volt_list.append('Boop')
-    #Breaking the loop is the user enters a non number
+    # Breaking the loop is the user enters a non number
     except ValueError:
         print('Not robot compliant!')
         break

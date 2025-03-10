@@ -21,7 +21,7 @@ while True:
             porridge_list.append('too hot')
         else:
             porridge_list.append('too cold')
-    #Breaking the loop is the user enters a non number
+    # Breaking the loop is the user enters a non number
     except ValueError:
         print('Invalid temperature.')
 
