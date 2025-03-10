@@ -1,5 +1,5 @@
 """Records the users bank transactions"""
-#tttt
+
 # Defines how much money the user has after each transaction
 money_list = [200]
 # Inital bank balance
