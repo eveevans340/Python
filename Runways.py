@@ -22,17 +22,18 @@ while True:
         # Minimum and Maximum number for program to run
         if angle < MIN_ANGLE or angle > MAX_ANGLE:
             print('ERROR: INVALID ANGLE')
+        else:
 
-        # Calculation for the runway number
-        runway_number = (angle + 4 ) / 10
-        runway_rounded = int(runway_number)
+            # Calculation for the runway number
+            runway_number = (angle + 4 ) / 10
+            runway_rounded = int(runway_number)
 
-        # Changing the runway number to 0 if runway_calculation equals 36
-        if runway_number == 36:
-            runway_number = 0
+            # Changing the runway number to 0 if runway_calculation equals 36
+            if runway_rounded == 36:
+             runway_rounded = 0
 
-        # Adding the runway number onto the list
-        runway_list.append(runway_rounded)
+            # Adding the runway number onto the list
+            runway_list.append(runway_rounded)
 
     except ValueError:
         print('ERROR: INVALID ANGLE')
