@@ -25,7 +25,7 @@ while True:
 
         # Calculation for the runway number
         runway_number = (angle + 4 ) / 10
-        runway_rounded = int(round(runway_number, 0))
+        runway_rounded = int(runway_number)
 
         # Changing the runway number to 0 if runway_calculation equals 36
         if runway_number == 36:
@@ -33,9 +33,10 @@ while True:
 
         # Adding the runway number onto the list
         runway_list.append(runway_rounded)
-        
- except ValueError:
+
+    except ValueError:
         print('ERROR: INVALID ANGLE')
+
 # Printing all of the runway numbers
 for number in runway_list:
     print(number)
