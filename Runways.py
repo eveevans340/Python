@@ -6,6 +6,8 @@ runway_list = []
 MIN_ANGLE = 0
 # Maximum angle
 MAX_ANGLE = 359
+# angle number for runway 0
+RUNWAY_0 = 36
 
 # Asking for an angle
 while True:
@@ -25,15 +27,16 @@ while True:
         else:
 
             # Calculation for the runway number
-            runway_number = (angle + 4 ) / 10
-            runway_rounded = int(runway_number)
+            runway_calculation = (angle + 4 ) / 10
+            # Rounding the runway number
+            runway_number = int(runway_calculation)
 
-            # Changing the runway number to 0 if runway_calculation equals 36
-            if runway_rounded == 36:
-             runway_rounded = 0
+            # Changing the runway number to 0 if runway_calculation equals to 36
+            if runway_number == RUNWAY_0:
+             runway_number = 0
 
             # Adding the runway number onto the list
-            runway_list.append(runway_rounded)
+            runway_list.append(runway_number)
 
     except ValueError:
         print('ERROR: INVALID ANGLE')
