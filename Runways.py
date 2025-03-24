@@ -11,7 +11,7 @@ MAX_ANGLE = 359
 while True:
     try:
         angle = (input('Enter your angle please: '))
-           # Condition to break the loop
+        # Condition to break the loop
         if angle == 'complete':
             break
         else:
@@ -21,11 +21,15 @@ while True:
         if angle < MIN_ANGLE or angle > MAX_ANGLE:
             print('ERROR: INVALID ANGLE')
         # Calculation for the runway number
-        runway_calculation = angle + 4 / 1
-        # Changing the runway number to 0 if runway_calculation = 36
+        runway_calculation = angle + 4 / 10
+        # Changing the runway number to 0 if runway_calculation equals 36
         if runway_calculation == 36:
             runway_calculation = 0
         # Adding the runway number onto the list
-        runway_numbers.append(angle)
+        runway_numbers.append(runway_calculation)
     except ValueError:
         print('ERROR: INVALID ANGLE')
+
+# Printing all of the runway numbers
+for number in runway_numbers:
+    print(number)
