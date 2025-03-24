@@ -2,15 +2,23 @@
 
 # Creates list for the runway numbers
 runway_numbers = []
+# Minimum angle
+MIN_ANGLE = 0
+# Maximum angle
+MAX_ANGLE = 359
 
 # Asking for an angle
 while True:
     angle = (input('Enter your angle please:'))
-    # Breaking the loop if 'complete' is entered
+    # Condition to break the loop
     if angle == 'complete':
         break
-    # Converting the angle into an integer
-    angle = int(angle)
+    else:
+         # Converting the angle into an integer
+         angle = int(angle)
+    # Minimum and Maximum number for program to run
+    if angle < MIN_ANGLE or angle > MAX_ANGLE:
+        print('ERROR: INVALID ANGLE')
     # Calculation for the runway number
     runway_calculation = angle + 4 / 10
     if runway_calculation == 36:
