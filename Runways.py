@@ -11,7 +11,7 @@ ANGLE_36 = 36
 # Number for Runway 0 
 RUNWAY_0 = 0
 # Number to add to the angle
-NUM = 4
+ADD = 4
 # Number to divide the angle by
 DIVISOR = 10
 
@@ -30,7 +30,7 @@ while True:
             print('ERROR: INVALID ANGLE')
         else:
             # Calculating the runway number
-            runway_calc = (angle + NUM) / DIVISOR
+            runway_calc = (angle + ADD) / DIVISOR
             # Rounding the runway number
             runway_number = int(runway_calc)
             # Calculating if the Runway is Runway 0
