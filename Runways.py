@@ -12,14 +12,14 @@ ANGLE_36 = 36
 RUNWAY_0 = 0
 # Number to add to the angle
 NUM = 4
-# Number to divide angle by
+# Number to divide the angle by
 DIVISOR = 10
 
 # Asking and converting an angle to a runway number
 while True:
     try:
+        # Ask the user for an angle
         angle = (input('Enter your angle please: '))
-
         # Condition to break the loop
         if angle == 'complete':
             break
