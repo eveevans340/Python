@@ -10,8 +10,12 @@ MAX_ANGLE = 359
 ANGLE_36 = 36
 # Number for Runway 0 
 RUNWAY_0 = 0
+# Number to add to the angle
+NUM = 4
+# Number to divide angle by
+DIVISOR = 10
 
-# Asking for an angle
+# Asking and converting an angle to a runway number
 while True:
     try:
         angle = (input('Enter your angle please: '))
@@ -25,11 +29,11 @@ while True:
         if angle < MIN_ANGLE or angle > MAX_ANGLE:
             print('ERROR: INVALID ANGLE')
         else:
-            # Calculation for the runway number
-            runway_calc = (angle + 4) / 10
+            # Calculating the runway number
+            runway_calc = (angle + NUM) / DIVISOR
             # Rounding the runway number
             runway_number = int(runway_calc)
-            # Calculating if the number is Runway 0
+            # Calculating if the Runway is Runway 0
             if runway_number == ANGLE_36:
              runway_number = RUNWAY_0
             # Adding the runway number onto the list
